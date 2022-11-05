@@ -1,89 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html',{
-"title": "Контакты"
-})
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- magnific-popup -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Oskolnet</title>
+
+
+</head>
 
 <body>
+	<h1 class="visually-hidden">For SEO</h1>
+
 	@@include('html/header.html',{})
 	<main>
-		<section class="contacts">
-			<div id="map" style="min-height: 700px; max-width: 100%;">
-			</div>
-			<div class="breadcrumbs">
-				<div class="breadcrumbs__inner">
-					<ul class="breadcrumbs__list">
-						<li><a href="./index.html">Главная</a></li>
-						<li><span>Контакты</span></li>
-					</ul>
-				</div>
-			</div>
-			<h4 class="title">Контакты</h4>
+		<section class="about">
 			<div class="container">
-				<div class="contact__box">
-					<ul class="contact__list">
-						<li class="contact__item">
-							<a href="tel:+7 4725 43-97-20">
-								<svg class="icon">
-									<use xlink:href="@img/sprite.svg#header-phone"></use>
-								</svg>
-								+7 (4725) 43-97-20
-							</a>
-						</li>
-						<li class="contact__item">
-							<a href="info@oskolnet.ru">
-								<svg class="icon">
-									<use xlink:href="@img/sprite.svg#email"></use>
-								</svg>
-								info@oskolnet.ru
-							</a>
-						</li>
-						<li class="contact__item">
-							<svg class="icon">
-								<use xlink:href="@img/sprite.svg#marker"></use>
-							</svg>
-							РФ. г. Старый Оскол, мкр. Королева, д. 28
-						</li>
-						<li class="contact__item">
-							<ul class="social__list">
-								<li class="social__item">
-									<a href="#">
-										<svg class="icon">
-											<use xlink:href="@img/sprite.svg#viber-blue"></use>
-										</svg>
-									</a>
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__inner">
+						<ul class="breadcrumbs__list">
+							<li><a href="./index.html">Главная</a></li>
+							<li><span>О компании </span></li>
+						</ul>
+					</div>
+				</div>
+				<h2 class="title">
+					О компании
+				</h2>
+				<ul class="about__list">
+					<li class="mission">
+						<div class="item-inner">
+							<h3>Миссия компании</h3>
+							<p> <b>Основная</b> цель деятельности компании IT-Telecom заключается в предоставлении
+								Заказчикам
+								качественных и надёжных услуг, основанных на высоком профессионализме наших сотрудников
+								и применении современных и инновационных технологий.</p>
+							<p>Мы стремимся максимально полно удовлетворять потребности и пожелания наших Заказчиков,
+								демонстрируя гибкий и индивидуальный подход к запросам каждого из них.</p>
+						</div>
+						<img src="@img/mission1.jpg" alt="company">
+					</li>
+					<li class="mission2">
+						<div class="item-inner">
+							<p>Закрытое акционерное общество «Осколнэт» основано 4 апреля 1997 года. За более чем
+								25-летний опыт работы мы зарекомендовали себя в качестве надежного провайдера,
+								предоставляющего услуги качественно, недорого и в короткие сроки. Мы являемся динамично
+								развивающейся компанией, стремимся к улучшению качества услуг, развитию партнерской сети
+								и расширению клиентской базы.</p>
+							<p>Вне зависимости от того, решили ли Вы подключить кабельное телевидение, домашний интернет
+								или интернет в офис, мы предложим Вам современные технологии, чтобы Вы могли свободно
+								общаться в информационном обществе. Цены на тарифы, предлагаемые нами, одни из наиболее
+								выгодных в регионе. Среди наших услуг есть предложения как из бюджетного, так и премиум
+								сегмента.</p>
+						</div>
+						<img src="@img/mission2.jpg" alt="company">
+					</li>
+					<li class="dynamics">
+						<h3>Динамика развития</h3>
+						<div class="digits__inner">
+							<ul class="digits__list">
+								<li class="digits__item">
+									<div class="large-digit"> >25 </div>
+									<p>лет истории</p>
 								</li>
-								<li class="social__item">
-									<a href="#">
-										<svg class="icon">
-											<use xlink:href="@img/sprite.svg#wa-blue"></use>
-										</svg>
-									</a>
+								<li class="digits__item">
+									<div class="large-digit"> >50 </div>
+									<p>сотрудников</p>
 								</li>
-								<li class="social__item">
-									<a href="#">
-										<svg class="icon">
-											<use xlink:href="@img/sprite.svg#telegram-blue"></use>
-										</svg>
-									</a>
+								<li class="digits__item">
+									<div class="large-digit"> >450 </div>
+									<p>подключенных домов</p>
 								</li>
-								<li class="social__item">
-									<a href="#">
-										<svg class="icon">
-											<use xlink:href="@img/sprite.svg#vk-blue"></use>
-										</svg>
-									</a>
+								<li class="digits__item">
+									<div class="large-digit"> >5000 </div>
+									<p>Гб данных передаются каждую минуту</p>
 								</li>
 							</ul>
-						</li>
-					</ul>
-				</div>
+							<img src="@img/dynamics.jpg" alt="dynamics">
+						</div>
+
+					</li>
+					<li class="features">
+						<h3>Лучшие, потому что</h3>
+						<ul class="features__list">
+							<li class="features__item">
+								<svg class="icon">
+									<use xlink:href="@img/sprite.svg#features1"></use>
+								</svg>
+								<div class="title">Современные</div>
+								<span class="subtitle">Используем современные технологии и ставим интересы клиента на
+									первое место.</span>
+							</li>
+							<li class="features__item">
+								<svg class="icon">
+									<use xlink:href="@img/sprite.svg#features2"></use>
+								</svg>
+								<div class="title">Оперативные</div>
+								<span class="subtitle">Выполняем все поставленные задачи оперативно и в заявленные
+									сроки.</span>
+							</li>
+							<li class="features__item">
+								<svg class="icon">
+									<use xlink:href="@img/sprite.svg#features3"></use>
+								</svg>
+								<div class="title">Надёжные</div>
+								<span class="subtitle">Мы гарантируем, что наши услуги будут работать надёжно. Мы хотим,
+									чтобы вы и ваши близкие чувствовали ...</span>
+							</li>
+							<li class="features__item">
+								<svg class="icon">
+									<use xlink:href="@img/sprite.svg#features4"></use>
+								</svg>
+								<div class="title">Открытые</div>
+								<span class="subtitle">Вы всегда можете узнать, кто и что делает ...</span>
+							</li>
+						</ul>
+					</li>
+					<li class="gallery">
+						<h3>Фотогалерея</h3>
+						<div class="gallery__list">
+							<div class="gallery-grid">
+								<a class="item image-popup" href="@img/gallery-1.jpg">
+									<img src="@img/gallery-1.jpg" alt="gallery">
+								</a>
+								<a class="item image-popup" href="@img/gallery-2.jpg">
+									<img src="@img/gallery-2.jpg" alt="gallery">
+								</a>
+								<a class="item image-popup" href="@img/gallery-3.jpg">
+									<img src="@img/gallery-3.jpg" alt="gallery">
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</section>
 	</main>
 	@@include('html/footer.html',{})
-	<script src="js/contacts.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+
+
+	<!--  jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<!-- magnific-popup -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<!-- js -->
+	<script src="js/gallery.js"></script>
 </body>
 
 </html>

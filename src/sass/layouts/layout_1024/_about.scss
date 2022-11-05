@@ -1,0 +1,95 @@
+.about {
+
+
+	// ---------------------
+
+	.about__list {
+		h3 {
+			text-align: left;
+		}
+
+		.dynamics {
+			.digits__inner {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+
+			.digits__list {
+				width: 500px;
+				margin-right: 10px;
+				margin-bottom: 0px;
+				gap: 20px 0;
+			}
+
+			.digits__item {
+				flex: 50%;
+
+
+			}
+
+			img {
+
+				width: 55%;
+			}
+		}
+
+		.features {
+			&__list {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+			}
+
+			&__item {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: center;
+
+				svg {
+					width: 68px;
+					height: 68px;
+					margin-bottom: 15px;
+				}
+
+				.title {
+					font-size: 30px;
+					margin-bottom: 15px;
+				}
+
+				.subtitle {
+					font-size: 18px;
+					text-align: center;
+				}
+			}
+		}
+
+		.gallery-grid {
+			padding-bottom: 30px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.item {
+				margin-right: 20px;
+				margin-bottom: 30px;
+
+				&:last-child {
+					margin: 0px;
+				}
+			}
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+
+
+	}
+}

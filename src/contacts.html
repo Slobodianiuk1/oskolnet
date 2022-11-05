@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title": "Контакты"
+})
+
+<body>
+	@@include('html/header.html',{})
+	<main>
+		<section class="contacts">
+			<div id="map" style="min-height: 700px; max-width: 100%;">
+			</div>
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__inner">
+					<ul class="breadcrumbs__list">
+						<li><a href="./index.html">Главная</a></li>
+						<li><span>Контакты</span></li>
+					</ul>
+				</div>
+			</div>
+			<h4 class="title">Контакты</h4>
+			<div class="container">
+				<div class="contact__box">
+					<ul class="contact__list">
+						<li class="contact__item">
+							<a href="tel:+7 4725 43-97-20">
+								<svg class="icon">
+									<use xlink:href="@img/sprite.svg#header-phone"></use>
+								</svg>
+								+7 (4725) 43-97-20
+							</a>
+						</li>
+						<li class="contact__item">
+							<a href="info@oskolnet.ru">
+								<svg class="icon">
+									<use xlink:href="@img/sprite.svg#email"></use>
+								</svg>
+								info@oskolnet.ru
+							</a>
+						</li>
+						<li class="contact__item">
+							<svg class="icon">
+								<use xlink:href="@img/sprite.svg#marker"></use>
+							</svg>
+							РФ. г. Старый Оскол, мкр. Королева, д. 28
+						</li>
+						<li class="contact__item">
+							<ul class="social__list">
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="@img/sprite.svg#viber-blue"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="@img/sprite.svg#wa-blue"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="@img/sprite.svg#telegram-blue"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="@img/sprite.svg#vk-blue"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('html/footer.html',{})
+	<script src="js/contacts.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+</body>
+
+</html>

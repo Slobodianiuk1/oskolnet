@@ -8,7 +8,15 @@
 		margin-bottom: 27px;
 	}
 
-	.content {}
+	.content {
+		margin-bottom: 40px;
+	}
+
+	@media only screen and (min-width:768px) {
+		.btn {
+			width: 250px;
+		}
+	}
 
 	img {
 		height: 100%;
@@ -28,4 +36,6 @@
 			margin-bottom: 0;
 		}
 	}
+
+
 }

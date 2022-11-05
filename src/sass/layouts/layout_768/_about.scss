@@ -1,0 +1,166 @@
+.about {
+
+
+	// ---------------------
+
+	.about__list {
+		&>li {
+			margin-bottom: 140px;
+
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+
+		h3 {
+			font-size: 48px;
+			margin-bottom: 30px;
+			text-align: center;
+
+		}
+
+
+
+		.mission {
+			flex-direction: row;
+			align-items: flex-start;
+
+			h3 {
+				text-align: left
+			}
+
+			;
+
+			img {
+				flex: 1;
+				height: 100%;
+				object-fit: cover;
+				width: 40%;
+
+			}
+
+			.item-inner {
+
+				margin-right: 30px;
+				margin-bottom: 0;
+			}
+
+		}
+
+		.mission2 {
+			flex-direction: row;
+			align-items: flex-start;
+
+			img {
+				order: 1;
+				flex: 1;
+				height: 100%;
+				object-fit: cover;
+				width: 40%;
+				margin-right: 30px;
+			}
+
+			.item-inner {
+				order: 2;
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		.mission p,
+		.mission2 p {
+			font-size: 18px;
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+		.dynamics {
+			.digits__inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.digits__list {
+
+				margin-bottom: 20px;
+
+			}
+
+			.digits__item {
+				.large-digit {
+					font-size: 72px;
+				}
+			}
+
+			img {
+
+				width: 70%;
+			}
+		}
+
+		.features {
+			&__list {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+			}
+
+			&__item {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: center;
+
+				svg {
+					width: 68px;
+					height: 68px;
+					margin-bottom: 15px;
+				}
+
+				.title {
+					font-size: 30px;
+					margin-bottom: 15px;
+				}
+
+				.subtitle {
+					font-size: 18px;
+					text-align: center;
+				}
+			}
+		}
+
+		.gallery-grid {
+			padding-bottom: 30px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.item {
+				margin-right: 20px;
+				margin-bottom: 30px;
+
+				&:last-child {
+					margin: 0px;
+				}
+			}
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+
+
+	}
+}
