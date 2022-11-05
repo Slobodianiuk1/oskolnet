@@ -1,0 +1,112 @@
+.header {
+	padding: 22px 0;
+	background-color: #FFFFFF;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center
+	}
+
+	&__logo {
+
+		position: relative;
+
+		img {
+			width: 157px;
+			height: 95px;
+		}
+	}
+
+	&__phone {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #263057;
+		position: relative;
+
+		@media only screen and (min-width: 360px) {
+			svg {
+				display: block;
+			}
+		}
+
+	}
+
+	.menu {
+		display: block;
+		align-items: center;
+		position: static;
+		padding: 0 0 0 0;
+		overflow: auto;
+		z-index: 10;
+		overflow: visible;
+		max-width: 40%;
+		height: auto;
+
+
+
+		&__list {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			justify-content: start;
+
+		}
+
+		&__item {
+			width: auto;
+			padding: 0;
+			position: relative;
+			color: #263057;
+			margin-right: 25px;
+
+			&:after {
+				display: none;
+
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__link {
+			display: inline-block;
+			font-size: 18px;
+			min-width: 100%;
+
+			&::after {
+				content: "";
+				display: block;
+				height: 2px;
+				background-color: #6984F0;
+				-webkit-transition: right 0.2s linear;
+				-o-transition: right 0.2s linear;
+				transition: right 0.2s linear;
+				position: absolute;
+				top: calc(100% + 1px);
+				left: 0;
+				right: 100%;
+
+			}
+
+			&:hover:after {
+				right: 0;
+
+			}
+
+		}
+	}
+
+	&__burger-btn {
+		display: none;
+
+	}
+
+
+}

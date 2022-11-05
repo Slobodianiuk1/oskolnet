@@ -1,0 +1,273 @@
+.tariffs {
+	padding: 40px 0;
+
+	.container {
+		padding: 0;
+	}
+
+	.title {
+		margin-bottom: 10px;
+
+	}
+
+	.tabs {
+		background-color: #fff;
+		border-radius: 15px;
+		padding: 10px 0;
+
+
+
+
+		// --------TABS
+		&__nav {
+			padding: 0 10px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 20px;
+
+		}
+
+		&__nav-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			padding: 10px 5px;
+			border: 0;
+			font-weight: 400;
+			font-size: 14px;
+			text-align: center;
+			color: #263057;
+			background-color: #fff;
+			border-radius: 15px;
+			// margin-right: 10px;pc
+			position: relative;
+
+			span {
+				padding: 2px 10px;
+				background: #6984F0;
+				border-radius: 10px;
+				font-weight: 700;
+				font-size: 9px;
+				line-height: 13px;
+				color: #FFFFFF;
+				margin-left: 9px;
+				line-height: 13px;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__nav-btn::after {
+			content: "";
+			display: block;
+			height: 1px;
+			background-color: #6984F0;
+			-webkit-transition: right 0.2s linear;
+			-o-transition: right 0.2s linear;
+			transition: right 0.2s linear;
+			position: absolute;
+			top: calc(100% + 1px);
+			left: 0;
+			right: 100%;
+			top: 33px;
+		}
+
+		&__nav-btn:hover::after {
+			right: 0;
+
+
+
+		}
+
+
+		&__content {
+			position: relative;
+			padding: 0 20px;
+			margin-bottom: 70px;
+		}
+
+		&__item {
+			display: none;
+			overflow: hidden;
+
+		}
+
+		&__content .active {
+			display: block;
+		}
+
+
+
+		&__nav .active {
+			position: relative;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 140%;
+			text-align: center;
+			color: #263057;
+		}
+
+		&__nav .active::after {
+			content: "";
+			display: block;
+			height: 1px;
+			background-color: #6984F0;
+			-webkit-transition: right 0.2s linear;
+			-o-transition: right 0.2s linear;
+			transition: right 0.2s linear;
+			position: absolute;
+			top: calc(100% + 1px);
+			left: 0;
+			right: 100%;
+			top: 33px;
+
+		}
+
+		&__nav .active:after {
+			right: 0;
+
+		}
+
+		// ------------
+
+		//	SLIDER
+
+		// card
+
+
+		.swiper-slide {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			// width: 228px;
+			padding: 20px 20px 36px;
+			background-color: #fff;
+			border: solid 1px #263158;
+			border-radius: 30px;
+			height: auto;
+
+			.top {
+				display: block;
+				padding: 2px 10px 0;
+				width: 45px;
+				height: 20px;
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 18px;
+				color: #FFFFFF;
+				background: #FFFFFF;
+				border-radius: 10px;
+				text-transform: uppercase;
+				margin-bottom: 25px;
+			}
+
+
+			h5 {
+				font-weight: 700;
+				font-size: 30px;
+				color: #263057;
+				margin-bottom: 15px;
+			}
+
+			.speed {
+				display: flex;
+				align-items: center;
+				justify-content: start;
+				margin-bottom: 15px;
+
+				svg {
+					width: 22px;
+					height: 22px;
+					margin-right: 16px;
+				}
+
+				span {
+					font-weight: 700;
+					font-size: 24px;
+					color: #263057;
+				}
+			}
+
+			.detail {
+				padding: 0;
+				border: 0;
+				background-color: transparent;
+				margin-bottom: 35px;
+				display: block;
+				cursor: pointer;
+
+				span {
+					position: relative;
+					font-weight: 400;
+					font-size: 18px;
+					color: #263057;
+
+				}
+
+				svg {
+					width: 15px;
+					height: 15px;
+
+				}
+
+			}
+
+			.price {
+				font-weight: 700;
+				font-size: 30px;
+				color: #263057;
+				margin-bottom: 20px;
+
+				span {
+					font-weight: 400;
+					font-size: 18px;
+				}
+			}
+
+
+
+
+		}
+
+		.hit {
+			background: linear-gradient(180deg, #273158 0%, #0C244D 100%);
+			border-radius: 30px;
+
+			.top {
+				color: #263057;
+			}
+
+			h5 {
+				color: #fff;
+			}
+
+			.speed {
+				span {
+					color: #fff;
+				}
+			}
+
+			.detail {
+				.link {
+					color: #fff;
+				}
+			}
+
+			.price {
+				color: #fff;
+			}
+		}
+	}
+
+	.swiper-pagination {
+		bottom: -40px;
+	}
+
+	//----------
+
+}

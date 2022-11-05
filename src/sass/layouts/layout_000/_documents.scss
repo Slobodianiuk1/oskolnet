@@ -1,0 +1,57 @@
+.documents {
+	background-color: #fff;
+	padding: 40px 0;
+
+	.title {
+		margin-bottom: 20px;
+	}
+
+	.doc__list {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+
+		.doc__item {
+			display: flex;
+			align-items: center;
+			// justify-content: center;
+			border-radius: 15px;
+			background-color: #F1F2F4;
+			padding: 14px 20px;
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex: none;
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				background-color: #fff;
+				margin-right: 17px;
+
+				svg {
+					width: 18px;
+					height: 23px;
+				}
+			}
+
+			.link {
+				display: inline-block;
+				font-size: 18px;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 26px;
+				position: relative;
+				letter-spacing: -0.02em;
+
+				color: #263057;
+			}
+		}
+	}
+}

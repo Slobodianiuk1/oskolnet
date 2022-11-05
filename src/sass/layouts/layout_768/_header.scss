@@ -1,0 +1,24 @@
+.header {
+
+
+	&__btns {
+		display: flex;
+		flex-direction: row;
+		width: 340px;
+		position: static;
+
+		transform: translate(0);
+
+		a {
+			display: block;
+			min-width: 171px;
+			margin-right: 20px;
+			margin-bottom: 0;
+
+			&:last-child {
+				margin-right: 0;
+				min-width: 148px;
+			}
+		}
+	}
+}

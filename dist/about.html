@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Swiper -->
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Контакты</title>
+
+	<style>
+		.bg-img {
+
+			background-image: url('../img/slide1.png');
+			background-repeat: no-repeat;
+			background-position: calc(50% - 20px) calc(90% - 30px);
+			background-size: contain;
+		}
+
+		.bg-img2 {
+			background-image: url('../img/slide_2.jpg');
+			background-repeat: no-repeat;
+			background-position: calc(50% - 20px) calc(90% - 30px);
+			background-size: contain;
+		}
+
+		@media only screen and (min-width: 576px) {
+
+			.bg-img,
+			.bg-img2 {
+				background-position: calc(50% - 20px) calc(100% + 50px);
+			}
+		}
+
+		@media only screen and (min-width: 576px) {
+
+			.bg-img,
+			.bg-img2 {
+				background-position: calc(50% - 20px) calc(100% + 50px);
+			}
+		}
+
+		@media only screen and (min-width: 1024px) {
+
+			.bg-img,
+			.bg-img2 {
+				background-position: calc(100% + 20px) calc(50% - 0px);
+				background-size: contain;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+	<div class="container">
+		<a class="header__logo" href="./index.html">
+			<img src="./img/logo.svg" alt="logo" width="85" height="50">
+		</a>
+		<nav class="header__menu menu">
+			<h2 class="visually-hidden">main navigation</h2>
+			<ul class="menu__list">
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Тарифы для дома
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Тарифы для бизнеса
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="./about.html">
+						Контакты
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<a class="header__phone" href="tel:+7 (4725) 43-97-20">
+			<svg class="icon">
+				<use xlink:href="./img/sprite.svg#header-phone"></use>
+			</svg>
+			<span><b>+7 (4725) 43-97-20</b></span>
+		</a>
+		<div class="header__btns">
+			<a class="cabinet" href="#">Личный кабинет</a>
+			<a href="#">Оплатить</a>
+		</div>
+		<button class="header__burger-btn">
+			<span></span>
+		</button>
+	</div>
+</header>
+	<main>
+		<section class="contacts">
+			<div id="map" style="min-height: 700px; max-width: 100%;">
+			</div>
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__inner">
+					<ul class="breadcrumbs__list">
+						<li><a href="./index.html">Главная</a></li>
+						<li><span>Контакты</span></li>
+					</ul>
+				</div>
+			</div>
+			<h4 class="title">Контакты</h4>
+			<div class="container">
+				<div class="contact__box">
+					<ul class="contact__list">
+						<li class="contact__item">
+							<a href="tel:+7 4725 43-97-20">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#header-phone"></use>
+								</svg>
+								+7 (4725) 43-97-20
+							</a>
+						</li>
+						<li class="contact__item">
+							<a href="info@oskolnet.ru">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#email"></use>
+								</svg>
+								info@oskolnet.ru
+							</a>
+						</li>
+						<li class="contact__item">
+							<svg class="icon">
+								<use xlink:href="./img/sprite.svg#marker"></use>
+							</svg>
+							РФ. г. Старый Оскол, мкр. Королева, д. 28
+						</li>
+						<li class="contact__item">
+							<ul class="social__list">
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="./img/sprite.svg#viber-blue"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="./img/sprite.svg#wa-blue"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="./img/sprite.svg#telegram-blue"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#">
+										<svg class="icon">
+											<use xlink:href="./img/sprite.svg#vk-blue"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+	<div class="container">
+		<div class="footer__top footer-top">
+			<nav class="footer-top__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<ul>
+							<li>
+								<a class="menu__link link" href="#">О компании</a>
+							</li>
+							<li>
+								<a class="menu__link link" href="#">Новости</a>
+							</li>
+							<li>
+								<a class="menu__link link" href="#">Документы</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<ul>
+							<li>
+								<a class="menu__link link" href="#">Тарифы для дома</a>
+							</li>
+							<li>
+								<a class="menu__link link" href="#">Тарифы для бизнеса</a>
+							</li>
+							<li>
+								<a class="menu__link link" href="../about.html">Контакты</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<ul>
+							<li>
+								<a class="menu__link link" href="#">Тест скорости</a>
+							</li>
+							<li>
+								<a class="menu__link link" href="#">Карта покрытия</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer-top__buttons buttons">
+				<div class="buttons__grup-btns">
+					<a class="cabinet" href="#">Личный кабинет</a>
+					<a href="#">Оплатить</a>
+				</div>
+				<a class="buttons__phone" href="tel:+7 (4725) 43-97-20">
+					<svg class="icon">
+						<use xlink:href="./img/sprite.svg#footer-phone"></use>
+					</svg>
+					<span>+7 (4725) 43-97-20</span>
+					<p>Круглосуточно</p>
+				</a>
+				<div class="footer-top__social social">
+					<ul class="social__list">
+						<li class="social__item">
+							<a href="#">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#viber"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="#">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#wa"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="#">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#telegram"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="#">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#vk"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="footer__bottom">
+			<div class="copyright">
+				© ЗАО «Осколнэт», 2022
+			</div>
+			<div class="text__description">
+				Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookies и других пользовательских
+				данных, в соответствии с <a class="link" href="/privacy/"
+					title="Политика в отношении обработки персональных данных">Политикой конфиденциальности</a>
+			</div>
+			<div class="developer">
+				<a href="#" title="logo">
+					<svg class="icon">
+						<use xlink:href="./img/sprite.svg#sitex-logo-white"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</footer>
+	<script src="js/contacts.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+</body>
+
+</html>
