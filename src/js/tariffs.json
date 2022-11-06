@@ -1,0 +1,27 @@
+[
+	{
+		"title": "Medium",
+		"speed": "30 Мбит/с",
+		"price": "300"
+	},
+	{
+		"title": "Total",
+		"speed": "60 Мбит/с",
+		"price": "450"
+	},
+	{
+		"title": "Energy",
+		"speed": "100 Мбит/с",
+		"price": "600"
+	},
+	{
+		"title": "Ultra",
+		"speed": "200 Мбит/с",
+		"price": "900"
+	},
+	{
+		"title": "Rush",
+		"speed": "300 Мбит/с",
+		"price": "1100"
+	}
+]

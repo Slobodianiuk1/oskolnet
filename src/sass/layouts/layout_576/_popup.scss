@@ -1,0 +1,46 @@
+.popup-tariffs {
+
+
+
+	.popup__body {
+		padding: 30px 20px;
+	}
+
+	.popup__content {
+
+		position: static;
+
+	}
+
+
+
+	.popup__main {
+		width: 100%;
+		height: 100%;
+		overflow: unset;
+		display: flex;
+	}
+
+
+
+	// ----------
+
+	.popup-main__left {
+		flex: 40%;
+		margin-right: 10px;
+	}
+
+	.popup-main__right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 60%;
+	}
+
+}
+
+
+
+
+// ----------

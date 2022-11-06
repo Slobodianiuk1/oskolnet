@@ -19,7 +19,7 @@ export const path = {
 		images: `${srcFolder}/img/**/*.*`,
 	},
 	watch: {
-		js: `${srcFolder}/js/**/*.js`,
+		js: `${srcFolder}/js/**/*.*`,
 		scss: `${srcFolder}/sass/**/*.scss`,
 		html: `${srcFolder}/**/*.html`,
 		images: `${srcFolder}/img/**/*.*`,

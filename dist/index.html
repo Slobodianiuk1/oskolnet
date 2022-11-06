@@ -161,7 +161,7 @@
 										</span>
 									</div>
 									<button class="detail " href="#">
-										<span class="link"> Подробней</span>
+										<a class="more link"> Подробней</a>
 										<svg class="icon">
 											<use xlink:href="./img/sprite.svg#detail2"></use>
 										</svg>
@@ -182,7 +182,7 @@
 										</span>
 									</div>
 									<button class="detail " href="#">
-										<span class="link"> Подробней</span>
+										<a class="more link"> Подробней</a>
 										<svg class="icon">
 											<use xlink:href="./img/sprite.svg#detail2"></use>
 										</svg>
@@ -203,7 +203,7 @@
 										</span>
 									</div>
 									<button class="detail " href="#">
-										<span class="link"> Подробней</span>
+										<a class="more link"> Подробней</a>
 										<svg class="icon">
 											<use xlink:href="./img/sprite.svg#detail"></use>
 										</svg>
@@ -224,7 +224,7 @@
 										</span>
 									</div>
 									<button class="detail " href="#">
-										<span class="link"> Подробней</span>
+										<a class="more link"> Подробней</a>
 										<svg class="icon">
 											<use xlink:href="./img/sprite.svg#detail2"></use>
 										</svg>
@@ -245,7 +245,7 @@
 										</span>
 									</div>
 									<button class="detail " href="#">
-										<span class="link"> Подробней</span>
+										<a class="more link"> Подробней</a>
 										<svg class="icon">
 											<use xlink:href="./img/sprite.svg#detail2"></use>
 										</svg>
@@ -598,6 +598,28 @@
 			</div>
 		</div>
 	</section>
+	<section class="form-1">
+		<div class="container">
+			<h4 class="title">Трудно выбрать? Мы поможем!</h4>
+			<form class="js-form" action="" novalidate>
+				<div class="form__group">
+					<input type="tel" class="input js-input js-input-phone phone" name="phone"
+						placeholder="+7(___)___-__-__">
+				</div>
+				<div class="form__group">
+					<input type="text" class="input js-input js-input-name" name="name" placeholder="Как вас зовут?">
+				</div>
+				<div class="form__group">
+					<input type="checkbox" class="checkbox__input js-input-checkbox" id="privacy_check">
+					<label class="checkbox__label" for="privacy_check">Нажимая на кнопку, я даю согласие на обработку
+						персональных данных</label>
+				</div>
+				<button class="btn" type="submit">
+					Жду звонка
+				</button>
+			</form>
+		</div>
+	</section>
 	<section class="about-company">
 		<div class="container">
 			<h4 class="title">О компании</h4>
@@ -651,7 +673,7 @@
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
-			<a class="btn" href="#">Все Новости</a>
+			<a class="btn" href="#">Все новости</a>
 		</div>
 	</section>
 	<section class="documents">
@@ -823,11 +845,97 @@
 
 	</div>
 </footer>
+	<div class="popup-tariffs popup__close" id="popup">
+	<!-- <div class="popup__body">
+		<div class="popup__content">
+			<div class="popup__header">
+				<span class="popup__title">Тариф «Бизнес-1»</span>
+				<button class="popup__close">&#10006;</button>
+			</div>
+			<div class="popup__main popup-main">
+				<div class="popup-main__left">
+					<span class="speed">2 Мбит/с</span>
+					<ul>
+						<li>
+							<div>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#check"></use>
+								</svg>
+							</div>
+							<p>Бесплатное подключение</p>
+						</li>
+						<li>
+							<div>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#check"></use>
+								</svg>
+							</div>
+							<p>Статический IP-адрес</p>
+						</li>
+					</ul>
+					<span class="speed">Необходимое оборудование</span>
+					<ul>
+						<li>
+							<div>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#check"></use>
+								</svg>
+							</div>
+							<p>Wi-Fi роутер</p>
+						</li>
+					</ul>
+					<p class="price">300 <span>₽/мес</span></p>
+					<a class="btn" href="#">Подключить</a>
+				</div>
+
+				<div class="popup-main__right">
+					<p>
+						Интернет и IP-телевидение у вас дома! Высокая и стабильная скорость доступа в Интернет,
+						множество популярных каналов: кино, детям, ток-шоу, бизнес, спорт, новости и пр. Тарифное
+						предложение доступно для подключения новых и перехода действующих клиентов. Подключение
+						производится при наличии технической возможности.
+					</p>
+					<ul class="bonus__list">
+						<li class="bonus__item">
+							<svg class="icon">
+								<use xlink:href="./img/sprite.svg#features1"></use>
+							</svg>
+							<div class="title">Бонус 1</div>
+						</li>
+						<li class="bonus__item">
+							<svg class="icon">
+								<use xlink:href="./img/sprite.svg#features2"></use>
+							</svg>
+							<div class="title">Бонус 2</div>
+						</li>
+						<li class="bonus__item">
+							<svg class="icon">
+								<use xlink:href="./img/sprite.svg#features3"></use>
+							</svg>
+							<div class="title">Бонус 3</div>
+						</li>
+						<li class="bonus__item">
+							<svg class="icon">
+								<use xlink:href="./img/sprite.svg#features4"></use>
+							</svg>
+							<div class="title">Бонус 4</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</div>
 
 
+
+	<script src="https://unpkg.com/imask"></script>
 	<!-- Swiper JS -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 	<script src="js/app.js"></script>
+
+	<!-- <script src="https://unpkg.com/imask"></script> -->
 </body>
 
 </html>

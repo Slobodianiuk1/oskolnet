@@ -165,4 +165,209 @@ const SWIPER_TARIFS = new Swiper('.swiper-tariffs', {
 })
 
 // -----------------
+// POPUP TARIFFS
+
+const API = './js/tariffs.json';
+const MORE_BTN = document.querySelectorAll('.more')
+const POPUP = document.querySelector('#popup')
+const CLOSE = document.querySelector('.popup__close')
+
+let readJson = () => {
+	fetch(API)
+		.then((response) => response.json())
+		.then((data) => {
+
+			getTariffsPopup(data);
+
+		})
+		.catch((error) => {
+			console.log(error);
+		})
+}
+
+
+
+let getTariffsPopup = (data) => {
+
+
+
+	for (let i = 0; i < MORE_BTN.length; i++) {
+		MORE_BTN[i].addEventListener("click", function () {
+			console.log(1)
+
+			POPUP.classList.add('active');
+			const TITLE = data[i].title;
+			const SPEED = data[i].speed;
+			const PRICE = data[i].price;
+
+			POPUP.innerHTML = `<div class="popup__body">
+			<div class="popup__content">
+				<div class="popup__header">
+					<span class="popup__title">Тариф «${TITLE}»</span>
+					<button class="popup__close">&#10006;</button>
+				</div>
+				<div class="popup__main popup-main">
+					<div class="popup-main__left">
+						<span class="speed">${SPEED}</span>
+						<ul>
+							<li>
+								<div>
+									<svg class="icon">
+										<use xlink:href="./img/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Бесплатное подключение</p>
+							</li>
+							<li>
+								<div>
+									<svg class="icon">
+										<use xlink:href="./img/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Статический IP-адрес</p>
+							</li>
+						</ul>
+						<span class="SPEED">Необходимое оборудование</span>
+						<ul>
+							<li>
+								<div>
+									<svg class="icon">
+										<use xlink:href="./img/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Wi-Fi роутер</p>
+							</li>
+						</ul>
+						<p class="price">${PRICE} <span>₽/мес</span></p>
+						<a class="btn" href="#">Подключить</a>
+					</div>
+		
+					<div class="popup-main__right">
+						<p>
+							Интернет и IP-телевидение у вас дома! Высокая и стабильная скорость доступа в Интернет,
+							множество популярных каналов: кино, детям, ток-шоу, бизнес, спорт, новости и пр. Тарифное
+							предложение доступно для подключения новых и перехода действующих клиентов. Подключение
+							производится при наличии технической возможности.
+						</p>
+						<ul class="bonus__list">
+							<li class="bonus__item">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#features1"></use>
+								</svg>
+								<div class="title">Бонус 1</div>
+							</li>
+							<li class="bonus__item">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#features2"></use>
+								</svg>
+								<div class="title">Бонус 2</div>
+							</li>
+							<li class="bonus__item">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#features3"></use>
+								</svg>
+								<div class="title">Бонус 3</div>
+							</li>
+							<li class="bonus__item">
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#features4"></use>
+								</svg>
+								<div class="title">Бонус 4</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>`
+
+		});
+	}
+
+	CLOSE.addEventListener("click", function () {
+
+		POPUP.classList.remove('active');
+
+
+	});
+
+}
+
+readJson();
+
+
+// PHONE MASK
+
+
+
+let phoneInput = document.querySelector(".phone");
+
+const phoneMask = new IMask(phoneInput, {
+	mask: "+{7}(000)000-00-00",
+});
+
+
+let form = document.querySelector('.js-form'),
+	formInputs = document.querySelectorAll('.js-input'),
+	inputPhone = document.querySelector('.js-input-phone'),
+	inputName = document.querySelector('.js-input-name'),
+	inputCheckbox = document.querySelector('.js-input-checkbox');
+
+
+
+function validatePhone(phone) {
+	let re = /^.{16}$/;
+	return re.test(String(phone));
+}
+
+function validateName(name) {
+	let re = /^[a-zA-Z][a-zA-Z0-9-_\.]{2,20}$/;
+	return re.test(String(name));
+}
+
+form.onsubmit = function () {
+	let phoneVal = inputPhone.value,
+		nameVal = inputName.value,
+		emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+
+	formInputs.forEach(function (input) {
+		if (input.value === '') {
+			input.classList.add('error');
+
+		} else {
+			input.classList.remove('error');
+		}
+	});
+
+	if (emptyInputs.length !== 0) {
+		console.log('inputs not filled');
+		return false;
+	}
+
+
+	if (!validatePhone(phoneVal)) {
+		console.log('phone not valid');
+		inputPhone.classList.add('error');
+		return false;
+	} else {
+		inputPhone.classList.remove('error');
+	}
+
+	if (!validateName(nameVal)) {
+		console.log('name not valid');
+		inputName.classList.add('error');
+		return false;
+	} else {
+		inputName.classList.remove('error');
+	}
+
+	if (!inputCheckbox.checked) {
+		console.log('checkbox not checked');
+		inputCheckbox.classList.add('error');
+		return false;
+	} else {
+		inputCheckbox.classList.remove('error')
+	}
+
+
+}
 
