@@ -1,6 +1,28 @@
 .form-1 {
 	margin-bottom: 30px;
 
+	.js-form {
+		display: flex;
+
+
+	}
+
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1;
+		justify-content: space-between;
+		margin-right: 10px;
+	}
+
+	.form__group {
+		flex: 0 0 49%;
+
+		&:last-child {
+			flex: none;
+		}
+	}
+
 	.container {
 		max-width: 1180px;
 		background: linear-gradient(92.37deg, #263057 29.38%, #1D1444 100.81%);
@@ -9,13 +31,7 @@
 		padding: 25px 20px;
 
 		.title {
-			text-align: left;
-			font-weight: 700;
-			font-size: 20px;
-			line-height: 130%;
-			color: #FFFFFF;
-			text-transform: none;
-			margin-bottom: 20px;
+			font-size: 38px;
 		}
 
 		.input {
@@ -54,18 +70,18 @@
 			line-height: 140%;
 			color: #FFFFFF;
 			padding: 0 0 0 10px;
-			cursor: pointer;
 		}
 
 		.form__group:nth-child(3) {
 			display: flex;
-			margin-bottom: 15px;
+			margin-bottom: 0px;
 
 		}
 
 		.btn {
-			width: 100%;
-			margin: 0 auto;
+			width: 223px;
+			height: 46px;
+			margin: 0;
 		}
 
 

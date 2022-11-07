@@ -1,6 +1,7 @@
 .form-2 {
 	margin-bottom: 30px;
 
+
 	.container {
 		max-width: 1180px;
 		background: linear-gradient(92.37deg, #263057 29.38%, #1D1444 100.81%);
@@ -9,25 +10,22 @@
 		padding: 25px 20px;
 
 		.title {
-			text-align: left;
-			font-weight: 700;
-			font-size: 20px;
-			line-height: 130%;
-			color: #FFFFFF;
-			text-transform: none;
-			margin-bottom: 20px;
+
+			font-size: 38px;
 		}
 
-
-		.input.error {
-			border-color: red;
+		.js-form-2 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 
 		.input-2 {
-			width: 100%;
+
+			// width: 100%;
 			height: 46px;
 			padding: 12px;
-			margin-bottom: 15px;
+			margin-bottom: 0;
 			border-radius: 5px;
 			background: #FFFFFF;
 		}
@@ -52,23 +50,33 @@
 
 		}
 
+		.form__group-2 {
+			flex: 1;
 
+			margin-right: 10px;
+			margin-bottom: 0;
+		}
 
 
 		.form__group-2:nth-child(1) {
+			display: flex;
+			flex: 8%;
+			align-items: center;
 			position: relative;
 
+
 			svg {
-				position: absolute;
-				width: 23px;
-				height: 28px;
-				fill: #263057;
+				position: static;
+				width: 54px;
+				height: 54.27px;
+				fill: #FFFFFF;
 				top: 10px;
 				left: 10px;
+				margin-right: 20px;
 			}
 
 			input {
-				padding: 0 0 0 40px;
+				padding: 0 0 0 12px;
 			}
 		}
 
@@ -79,8 +87,10 @@
 		}
 
 		.btn {
-			width: 100%;
-			margin: 0 auto;
+			// flex: none;
+			max-width: 223px;
+			height: 46px;
+			margin: 0;
 		}
 
 

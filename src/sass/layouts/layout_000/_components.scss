@@ -33,7 +33,8 @@
 	font-weight: 400;
 	font-size: 18px;
 	color: #FFFFFF;
-	transition: all .3s ease;
+	transition: color .3s ease;
+	cursor: pointer;
 
 	&:hover {
 		background-color: #4d6ce6;
