@@ -7,7 +7,7 @@ export function initMap() {
 
 	new google.maps.Marker({
 		map: map,
-		icon: "../img/contacts-marker.png",
+		icon: "./img/contacts-marker.png",
 		position: { lat: 51.31069638542042, lng: 37.89887356922796 },
 
 		draggable: false
