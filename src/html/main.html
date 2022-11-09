@@ -529,12 +529,19 @@
 		<div class="container">
 			<h4 class="title">Проверить возможность
 				подключения по вашему адресу</h4>
-			<form class="js-form-2" action="" novalidate>
+			<form class="js-form-2" action="" novalidate autocomplete="off">
 				<div class="form__group-2">
 					<svg class="icon">
 						<use xlink:href="@img/sprite.svg#marker-form"></use>
 					</svg>
-					<input type="text" class="input-2 js-input-2 js-input-st" name="st" placeholder="Улица">
+					<div>
+						<input type="text" class="input-2 js-input-2 js-input-st input-s" id="input-s" name="st"
+							placeholder="Улица">
+
+						<div class="result__blox">
+							<ul id="result"></ul>
+						</div>
+					</div>
 				</div>
 				<div class="form__group-2">
 					<input type="text" class="input-2 js-input-2 js-input-home" name="home" placeholder="Дом">

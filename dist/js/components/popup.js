@@ -153,10 +153,11 @@ export function tariffs() {
 export function search() {
 
 	const BTN_SEARCH = document.querySelector('.btn-search');
+	let input = document.querySelector('#input-s')
 
 
-	let form2 = document.querySelector('.js-form-2'),
-		formInputs2 = document.querySelectorAll('.js-input-2');
+	// let form2 = document.querySelector('.js-form-2'),
+	// 	formInputs2 = document.querySelectorAll('.js-input-2');
 
 
 	let searchJson = () => {
@@ -164,14 +165,73 @@ export function search() {
 			.then((response) => response.json())
 			.then((data) => {
 
-				console.log(data)
-				examination(data)
+				BTN_SEARCH.addEventListener('click', e => {
+					if (e.target)
+						examination(data);
+				})
+
+
+				searchForm(data);
+
+
 
 			})
 			.catch((error) => {
 				console.log(error);
 			})
 	}
+
+
+	let searchForm = (data) => {
+
+
+		console.log(1)
+
+		let input = document.querySelector('#input-s');
+		// let value = this.value.trim();
+		let res = document.getElementById("result");
+		let s = '';
+		if (!input.value) {
+			res.innerHTML = '';
+
+
+		}
+
+
+
+		for (let i = 0; i < data.length; ++i) {
+
+			if (data[i].st.search(input.value) !== -1) {
+				s += "<li>" + data[i].st + "</li>";
+			}
+		}
+		if (input.value) {
+			res.innerHTML = s;
+
+
+		} else {
+			s = ''
+			res.innerHTML = s;
+		}
+
+
+		document.getElementById("result").addEventListener("click", function (e) {
+			if (e.target.tagName == 'LI') {
+				document.getElementById("input-s").value = e.target.innerHTML;
+				res.innerHTML = '';
+			}
+		})
+
+	}
+
+
+
+	input.addEventListener('input', searchJson);
+
+
+
+
+
 
 	let examination = (data) => {
 		let popup = document.querySelector('.popup-search'),
@@ -183,13 +243,7 @@ export function search() {
 			valSt = st.value,
 			valHome = home.value;
 
-		// function validateSt(street) {
-		// 	if (!street) return street;
 
-		// 	street[0].toUpperCase() + street.slice(1);
-
-		// 	return false;
-		// }
 
 
 		formInputs2.forEach(function (input) {
@@ -207,19 +261,19 @@ export function search() {
 					const P1 = valSt;
 					const P2 = valHome;
 					popup.innerHTML = `<div class="popup__body popup__close-2">
-								<div class="black-backing"></div>
-								<div class="popup__content">
-									<div class="popup__header">
-										<span class="popup__title">Проверка на подключение</span>
-										<button class="popup__close-2">&#10006;</button>
+									<div class="black-backing"></div>
+									<div class="popup__content">
+										<div class="popup__header">
+											<span class="popup__title">Проверка на подключение</span>
+											<button class="popup__close-2">&#10006;</button>
+										</div>
+										<div class="popup__main popup-main">
+											<p class="p">
+											По адресу <strong> ${P1}</strong> дом <strong> ${P2}</strong> возможность подключения отсутствует :(
+											</p>
+										</div>
 									</div>
-									<div class="popup__main popup-main">
-										<p class="p">
-										По адресу <strong> ${P1}</strong> дом <strong> ${P2}</strong> возможность подключения отсутствует :(
-										</p>
-									</div>
-								</div>
-							</div>`
+								</div>`
 
 
 					for (let i = 0; i < data.length; i++) {
@@ -231,19 +285,19 @@ export function search() {
 									const P1 = valSt;
 									const P2 = valHome;
 									popup.innerHTML = `<div class="popup__body popup__close-2">
-								<div class="black-backing"></div>
-								<div class="popup__content">
-									<div class="popup__header">
-										<span class="popup__title">Проверка на подключение</span>
-										<button class="popup__close-2">&#10006;</button>
+									<div class="black-backing"></div>
+									<div class="popup__content">
+										<div class="popup__header">
+											<span class="popup__title">Проверка на подключение</span>
+											<button class="popup__close-2">&#10006;</button>
+										</div>
+										<div class="popup__main popup-main">
+											<p class="p">
+												По адресу <strong> ${P1}</strong> дом <strong> ${P2}</strong> возможноe подключение :)
+											</p>
+										</div>
 									</div>
-									<div class="popup__main popup-main">
-										<p class="p">
-											По адресу <strong> ${P1}</strong> дом <strong> ${P2}</strong> возможноe подключение :)
-										</p>
-									</div>
-								</div>
-							</div>`
+								</div>`
 
 								}
 							})
@@ -264,6 +318,10 @@ export function search() {
 			if (e.target.classList.contains('popup__close-2')) {
 				popup.classList.remove('active');
 				document.body.classList.remove('no-scroll')
+				formInputs2.forEach(e => {
+					e.value = null;
+				})
+
 			}
 		});
 
@@ -272,8 +330,13 @@ export function search() {
 
 	}
 
-	BTN_SEARCH.addEventListener('click', searchJson)
+	// BTN_SEARCH.addEventListener('click', searchJson)
 }
+
+
+
+
+
 
 export function galleryPopup() {
 

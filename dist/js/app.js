@@ -18,10 +18,11 @@ tariffs();
 search();
 
 //  FORM
-import { form1 } from './components/form.js';
+
+import { form1, } from './components/form.js';
 
 form1();
-
+// searchForm();
 
 // SLIDER
 import { hero, partners, news } from './components/slider.js';

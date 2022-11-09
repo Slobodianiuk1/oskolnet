@@ -56,7 +56,7 @@
 
 
 		.form__group-2:nth-child(1) {
-			position: relative;
+
 
 			svg {
 				position: absolute;
@@ -69,6 +69,34 @@
 
 			input {
 				padding: 0 0 0 40px;
+			}
+
+			div {
+				position: relative;
+				flex: 1;
+			}
+
+			.result__blox {
+				position: absolute;
+				right: 0;
+				top: 55px;
+				background-color: rgba(0, 0, 0, 0.937);
+
+				border-radius: 5px;
+				width: calc(100% - 2px);
+
+
+
+				li {
+					color: #FFFFFF;
+					padding: 10px;
+					transition: background-color .3s ease;
+
+					&:hover {
+						border-radius: 5px;
+						background-color: #041970;
+					}
+				}
 			}
 		}
 
@@ -84,6 +112,28 @@
 		}
 
 
+	}
+
+	.search__list {
+		position: absolute;
+		top: 55px;
+		border-radius: 5px;
+		// border: #1D1444 solid 1px;
+		left: 65px;
+		background-color: #FFFFFF;
+	}
+
+	.search__item {
+		display: none;
+		border-radius: 5px;
+		min-width: 320px;
+		padding: 10px 10px;
+		transition: background-color 0.3s ease;
+		user-select: none;
+
+		&:hover {
+			background-color: #6984F0;
+		}
 	}
 
 
