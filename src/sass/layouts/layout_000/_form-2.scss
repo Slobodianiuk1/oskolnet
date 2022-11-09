@@ -57,14 +57,16 @@
 
 		.form__group-2:nth-child(1) {
 
+			position: relative;
 
 			svg {
 				position: absolute;
 				width: 23px;
 				height: 28px;
-				fill: #263057;
+				fill: #1D1444;
 				top: 10px;
 				left: 10px;
+				z-index: 1;
 			}
 
 			input {
