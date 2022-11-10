@@ -94,6 +94,10 @@ export function news() {
 		mobileSlider()
 	});
 
+
+}
+
+export function tarif() {
 	const SWIPER_TARIFS = new Swiper('.swiper-tariffs', {
 		slidesPerView: 1.25,
 		spaceBetween: 10,

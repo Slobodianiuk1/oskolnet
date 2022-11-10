@@ -79,41 +79,43 @@ export function form1() {
 }
 
 
-export function searchForm() {
+// export function searchForm() {
 
 
-	let input = document.querySelector('#input-s');
-	input.oninput = function () {
-		let value = this.value.trim();
-		let list = document.querySelector('.search__list li')
-		if (value) {
-			list.forEach(elem => {
-				if (elem.innerText.search(value) == -1) {
-					elem.classList.remove('hide')
+// 	let input = document.querySelector('#input-s');
+// 	input.oninput = function () {
+// 		let value = this.value.trim();
+// 		let list = document.querySelector('.search__list li')
+// 		if (value) {
+// 			list.forEach(elem => {
+// 				if (elem.innerText.search(value) == -1) {
+// 					elem.classList.remove('hide')
 
 
 
-				} else {
-					elem.classList.add('hide')
-					elem.addEventListener('click', function () {
-						list.forEach(e => {
-							e.classList.remove('hide')
-						})
-						elem.classList.remove('hide')
-						return input.value = elem.innerText;
-					})
-				}
+// 				} else {
+// 					elem.classList.add('hide')
+// 					elem.addEventListener('click', function () {
+// 						list.forEach(e => {
+// 							e.classList.remove('hide')
+// 						})
+// 						elem.classList.remove('hide')
+// 						return input.value = elem.innerText;
+// 					})
+// 				}
 
-			});
-		} else {
-			list.forEach(elem => {
-				elem.classList.remove('hide')
+// 			});
+// 		} else {
+// 			list.forEach(elem => {
+// 				elem.classList.remove('hide')
 
-			})
-		}
-
-
-	}
+// 			})
+// 		}
 
 
-}
+// 	}
+
+
+// }
+
+

@@ -156,8 +156,6 @@ export function search() {
 	let input = document.querySelector('#input-s')
 
 
-	// let form2 = document.querySelector('.js-form-2'),
-	// 	formInputs2 = document.querySelectorAll('.js-input-2');
 
 
 	let searchJson = () => {
@@ -171,9 +169,8 @@ export function search() {
 				})
 
 
+
 				searchForm(data);
-
-
 
 			})
 			.catch((error) => {
@@ -185,7 +182,7 @@ export function search() {
 	let searchForm = (data) => {
 
 
-		console.log(1)
+
 
 		let input = document.querySelector('#input-s');
 		// let value = this.value.trim();
@@ -193,35 +190,97 @@ export function search() {
 		let s = '';
 		if (!input.value) {
 			res.innerHTML = '';
-
+			res.classList.add('hiden');
 
 		}
+
 
 
 
 		for (let i = 0; i < data.length; ++i) {
 
 			if (data[i].st.search(input.value) !== -1) {
-				s += "<li>" + data[i].st + "</li>";
+				s += `<option value="${i}" " > ${data[i].st}</option>`;
+
+				result.addEventListener("change", function (e) {
+					if (this.value == i) {
+						document.getElementById("input-s").value = e.target.innerText;
+					}
+				});
+
+
+
 			}
 		}
+
+		if (input == document.activeElement) {
+			setInterval(function () {
+				(input == document.activeElement) ? "yes" : res.classList.add('hiden');;
+			}, 1000);
+		}
+
+
 		if (input.value) {
 			res.innerHTML = s;
-
-
+			res.classList.remove('hiden');
+			if (!s) {
+				res.classList.add('hiden');
+			}
 		} else {
 			s = ''
 			res.innerHTML = s;
+			res.classList.add('hiden');
 		}
 
 
+
+
+
+
+		let i = 0;
+		const dropdown = document.getElementById("result");
+		const childs = dropdown.children;
+
+
+
+
+
+		input.addEventListener("keydown", function (event) {
+			switch (event.code) {
+				case "ArrowDown":
+					for (let c of childs)
+						c.classList.remove('dropbtn-selected')
+					childs[Math.abs(i) % childs.length].classList.add('dropbtn-selected');
+					input.value = childs[Math.abs(i) % childs.length].innerText;
+					i++;
+					break;
+				case "ArrowUp":
+					for (let c of childs)
+						c.classList.remove('dropbtn-selected')
+					childs[Math.abs(i) % childs.length].classList.add('dropbtn-selected');
+					input.value = childs[Math.abs(i) % childs.length].innerText;
+					i--;
+					break;
+
+				case "Enter":
+					res.classList.add('hiden');
+					document.querySelector('.js-input-home').focus()
+					break;
+
+
+			}
+		});
+
+
+
+
 		document.getElementById("result").addEventListener("click", function (e) {
-			if (e.target.tagName == 'LI') {
+			if (e.target.tagName == 'OPTION') {
 				document.getElementById("input-s").value = e.target.innerHTML;
 				res.innerHTML = '';
+				res.classList.add('hiden');
 			}
 		})
-
 	}
 
 
@@ -262,7 +321,7 @@ export function search() {
 					const P2 = valHome;
 					popup.innerHTML = `<div class="popup__body popup__close-2">
 									<div class="black-backing"></div>
-									<div class="popup__content">
+									<div class="popup__content red ">
 										<div class="popup__header">
 											<span class="popup__title">Проверка на подключение</span>
 											<button class="popup__close-2">&#10006;</button>
@@ -286,7 +345,7 @@ export function search() {
 									const P2 = valHome;
 									popup.innerHTML = `<div class="popup__body popup__close-2">
 									<div class="black-backing"></div>
-									<div class="popup__content">
+									<div class="popup__content ">
 										<div class="popup__header">
 											<span class="popup__title">Проверка на подключение</span>
 											<button class="popup__close-2">&#10006;</button>
@@ -356,4 +415,171 @@ export function galleryPopup() {
 			duration: 500
 		}
 	});
+}
+
+
+
+export function popupConnection() {
+
+
+
+	document.querySelectorAll('.connection').forEach(e => {
+
+		e.addEventListener("click", function (e) {
+
+			e.preventDefault()
+
+			document.querySelector('.popup-connection').classList.add('active');
+			document.body.classList.toggle('no-scroll');
+		})
+
+
+
+	})
+
+	// .addEventListener("click", function (e) {
+
+	// 	e.preventDefault()
+
+	// 	document.querySelector('.popup-connection').classList.add('active');
+	// 	document.body.classList.toggle('no-scroll');
+	// })
+
+
+
+
+
+
+
+
+
+	let phoneInput = document.querySelector(".phone3");
+
+	const phoneMask = new IMask(phoneInput, {
+		mask: "+{7}(000)000-00-00",
+	});
+
+
+	let form3 = document.querySelector('.js-form3'),
+		formInputs3 = document.querySelectorAll('.js-inpu3'),
+		inputPhone3 = document.querySelector('.js-input-phone3'),
+		inputName3 = document.querySelector('.js-input-name3'),
+		inputStr = document.querySelector('.js-input-str'),
+		inputTime = document.querySelector('.js-input-time'),
+
+		inputCheckbox3 = document.querySelector('.js-input-checkbox3');
+
+
+
+	function validatePhone(phone) {
+		let re = /^.{16}$/;
+		return re.test(String(phone));
+	}
+
+	function validateName(name) {
+		let re = /^[а-яА-ЯёЁa-zA-Z0-9]+$/;
+		return re.test(String(name));
+	}
+
+	form3.onsubmit = function () {
+		let phoneVal = inputPhone3.value,
+			nameVal = inputName3.value,
+			strVal = inputStr.value,
+			timeVal = inputTime.value,
+			emptyInputs = Array.from(formInputs3).filter(input => input.value === '');
+
+		formInputs3.forEach(function (input) {
+			if (input.value === '') {
+				input.classList.add('error');
+
+			} else {
+				input.classList.remove('error');
+			}
+		});
+
+		if (emptyInputs.length !== 0) {
+
+			return false;
+		}
+
+
+		if (!validatePhone(phoneVal)) {
+
+			inputPhone3.classList.add('error');
+			return false;
+		} else {
+			inputPhone3.classList.remove('error');
+		}
+
+		if (!validateName(nameVal)) {
+
+			inputName3.classList.add('error');
+			return false;
+		} else {
+			inputName3.classList.remove('error');
+		}
+
+		if (!validateName(strVal)) {
+
+			inputStr.classList.add('error');
+			return false;
+		} else {
+			inputStr.classList.remove('error');
+		}
+
+
+		if (!validateName(timeVal)) {
+
+			inputTime.classList.add('error');
+			return false;
+		} else {
+			inputTime.classList.remove('error');
+		}
+
+
+
+		if (!inputCheckbox3.checked) {
+			inputCheckbox3.classList.add('error');
+			return false;
+		} else {
+			inputCheckbox3.classList.remove('error')
+		}
+
+
+	}
+
+
+	const CLOSE_3 = document.querySelector('.popup__close-3')
+
+
+
+	CLOSE_3.addEventListener("click", function (e) {
+		if (e.target.classList.contains('popup__close-3')) {
+			document.querySelector('.popup-connection').classList.remove('active');
+			document.body.classList.remove('no-scroll')
+			formInputs3.forEach(e => {
+				e.value = null;
+			})
+
+
+
+			if (window.localStorage) {
+				var elements = formInputs3;
+
+				for (var i = 0, length = elements.length; i < length; i++) {
+					(function (element) {
+						var name = element.getAttribute('name');
+
+						element.value = localStorage.getItem(name) || '';
+
+						element.onkeyup = function () {
+							localStorage.setItem(name, element.value);
+						};
+					})(elements[i]);
+				}
+			}
+
+		}
+	});
+
 }

@@ -34,6 +34,7 @@
 
 		.input.error {
 			border-color: red;
+			background-color: rgb(210, 143, 143);
 		}
 
 		.input::placeholder {
@@ -45,6 +46,7 @@
 		}
 
 		.checkbox__input.error+.checkbox__label {
+			// background-color: rgb(210, 143, 143);
 			color: red;
 		}
 

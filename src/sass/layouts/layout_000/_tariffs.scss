@@ -196,6 +196,30 @@
 				}
 			}
 
+			.more {
+				padding: 0;
+				position: relative;
+				border: none;
+				background-color: transparent;
+				display: flex;
+				cursor: pointer;
+
+
+				span {
+					position: relative;
+					font-weight: 400;
+					font-size: 18px;
+					color: #263057;
+					margin-right: 8px;
+				}
+
+				svg {
+					width: 15px;
+					height: 15px;
+
+				}
+			}
+
 			.detail {
 				padding: 0;
 				border: 0;
@@ -241,11 +265,39 @@
 			background: linear-gradient(180deg, #273158 0%, #0C244D 100%);
 			border-radius: 30px;
 
+			.more {
+				padding: 0;
+				position: relative;
+				border: none;
+				background-color: transparent;
+				display: flex;
+				cursor: pointer;
+
+
+				span {
+					position: relative;
+					font-weight: 400;
+					font-size: 18px;
+					color: #fff;
+					margin-right: 8px;
+				}
+
+				svg {
+					width: 15px;
+					height: 15px;
+
+				}
+			}
+
 			.top {
 				color: #263057;
 			}
 
 			h5 {
+				color: #fff;
+			}
+
+			span {
 				color: #fff;
 			}
 
@@ -273,4 +325,8 @@
 
 	//----------
 
+}
+
+datalist {
+	background-color: #0C244D;
 }

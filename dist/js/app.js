@@ -12,11 +12,11 @@ tab();
 
 
 // POPUP
-import { tariffs, search } from './components/popup.js';
+import { tariffs, search, popupConnection } from './components/popup.js';
 
 tariffs();
 search();
-
+popupConnection();
 //  FORM
 
 import { form1, } from './components/form.js';
@@ -25,11 +25,12 @@ form1();
 // searchForm();
 
 // SLIDER
-import { hero, partners, news } from './components/slider.js';
+import { hero, partners, news, tarif } from './components/slider.js';
 
 hero();
 partners();
 news();
+tarif()
 
 
 
