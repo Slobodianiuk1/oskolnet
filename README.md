@@ -7,7 +7,7 @@ Home page of Product company website.
 ___
 
 #### :link: Live Demo: 
-[SITE](https://github.com/Slobodianiuk1/oskolnet/dest)
+[SITE](https://slobodianiuk1.github.io/oskolnet/dist/)
 
 [Design](The Free Library)
 ___
