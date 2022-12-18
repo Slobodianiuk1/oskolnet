@@ -3,7 +3,7 @@
 ## :pushpin: Oskolnet
 #### :memo: Description: 
 
-Home page of Product company website.
+A multi-page site of the Olkosnet company
 ___
 
 #### :link: Live Demo: 
@@ -27,5 +27,5 @@ ___
 ___
 
 #### :envelope: Contacts
-* LinkedIn: []()
-* Telegram: [@vladyslavS18](https://t.me/vladyslavS18)
+* LinkedIn: [Vladyslav Slobodianiuk](https://www.linkedin.com/in/vladyslav-slobodianiuk-076893241/)
+* Telegram: [Vladyslav Slobodianiuk](https://t.me/vladyslavS18)
