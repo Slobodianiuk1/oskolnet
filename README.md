@@ -3,7 +3,7 @@
 ## :pushpin: Oskolnet
 #### :memo: Description: 
 
-A multi-page site of the Olkosnet company
+A multi-page site of the Oskolnet company
 ___
 
 #### :link: Live Demo: 
